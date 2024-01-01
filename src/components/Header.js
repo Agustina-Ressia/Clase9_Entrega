@@ -2,16 +2,13 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {show_modal, hide_modal, login, logout} from '../features/login/loginSlice';
-import {useFonts} from 'expo-font';
+
 
 const Header = ({title}) => {
     const dispatch = useDispatch();
     //console.log("REDUX", useSelector(state => state.login.auth))
     const isAuthenticated = useSelector(state => state.login.auth.isAuthenticated);
     const username = useSelector(state => state.login.auth.username);
-    const [fontsLoaded] = useFonts({'Oswald': require('../../assets/fonts/Oswald-VariableFont_wght.ttf')});
-    if (!fontsLoaded) 
-        return null;
     
     const handleLoginPress = () => {
         if (!isAuthenticated) {

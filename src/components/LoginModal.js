@@ -8,7 +8,7 @@ import {
     Modal,
     StyleSheet
 } from 'react-native';
-import {show_modal, hide_modal, login, logout} from './loginSlice';
+import {show_modal, hide_modal, login, logout} from '../features/login/loginSlice';
 
 const LoginModal = ({visible, setVisible}) => {
     const dispatch = useDispatch();

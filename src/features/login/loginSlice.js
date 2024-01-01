@@ -1,4 +1,3 @@
-//import {SHOW_MODAL, HIDE_MODAL, LOGIN, LOGOUT} from '../actions';
 import {createSlice} from '@reduxjs/toolkit'
 
 export const loginSlice = createSlice({
